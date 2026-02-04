@@ -1,0 +1,31 @@
+entrypoint = "main.py"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-25_05"
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[agent]
+expertMode = true
+
+[userenv]
+
+[userenv.shared]
+TOKEN = "MTQ2ODM5NDA5NzYxNzE0MTc5MA.G_oY3R.Z-U5qVkUfT8WQjoPBTRMBttSStqdt5L16FBjy8"
+
+[userenv.development]
+
+[userenv.production]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
